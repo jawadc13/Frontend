@@ -1,0 +1,34 @@
+<div class="detail-section" style="margin-top: 5em;">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-2">
+                </div>
+
+            <div class="col-lg-4">
+                <img src="{{ product.imageUrl }}" class="detail-img-custom">
+
+            </div>
+            <div class="col-lg-4">
+
+
+        <h3 class="detail-title">{{ product.name }}</h3>
+        <div class="price">{{ product.unitPrice | currency:'USD' }}</div>
+        <button (click)="addToCart()" class="btn btn-primary btn-sm">Add to cart</button>
+
+        <hr>
+        <h4>Description</h4>
+        <p>{{ product.description }}</p>
+
+        <a routerLink="/products" class="page-link-color mt-5 detail-footer">Back to Product List</a>
+    
+
+            </div>
+
+        </div>
+
+       </div>
+    
+</div>
+
+
