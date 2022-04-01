@@ -4,13 +4,13 @@ FROM node:latest as build
 WORKDIR /app
 
 # Add the source code to app
-COPY package*.json .
+COPY package*.json ./
 
 # Install all the dependencies
 RUN npm install
 COPY . .
 # Generate the build of the application
-RUN npm run prod
+RUN npm run build --prod
 
 
 # Stage 2: Serve app with nginx server
@@ -21,7 +21,8 @@ FROM nginx:latest
 # Copy the build output to replace the default nginx contents.
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/dist/angular-ecommerce/ /usr/share/nginx/html
-
+EXPOSE 80
+CMD ["nginx","-g","daemon off;"]
 # Expose port 80
 
 # FROM node:12.18.1
