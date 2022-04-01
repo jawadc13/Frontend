@@ -144,7 +144,7 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
     top:0;
     right:0;
     left:200px;
-    height:100px;
+    height:75px;
     z-index:3
 }
 
@@ -334,7 +334,7 @@ input.au-input.au-input-xl{
 
 .menu-sidebar .logo{
     background:rgb(138, 17, 17);
-    height:100px;
+    height:75px;
     padding:0 35px;
     display:-webkit-box;
     display:-webkit-flex;
